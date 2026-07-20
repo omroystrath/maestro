@@ -54,15 +54,8 @@ maestro eval        --config configs/train/eval_smoke.yaml
 See [`docs/getting-started.md`](docs/getting-started.md) for the full walkthrough, and
 [`docs/architecture/overview.md`](docs/architecture/overview.md) for how the pieces fit.
 
-## The roadmap (gated by proof)
 
 
-## Working here
-
-- **Contributing:** [`CONTRIBUTING.md`](CONTRIBUTING.md)
-- **How we make decisions:** architecture decision records in [`docs/adr/`](docs/adr/)
-- **Code style:** `ruff` + `black` + `mypy`, enforced in CI. Run `make lint` before pushing.
-- **Data governance:** nothing sensitive in git. See [`docs/data-governance.md`](docs/data-governance.md).
 
 ## A note on VERTEX
 
