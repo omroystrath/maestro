@@ -11,7 +11,7 @@ neurostimulation outcomes for a specific brain instead of guessing.
 ```
 maestro/
 ├── src/maestro/            # the MAESTRO Python package (our code)
-│   ├── simulators/         # thin bridges to simulation engines (VERTEX, CANDO, analytic)
+│   ├── simulators/         # thin bridges to simulation engines (VERTEX)
 │   ├── data/               # data contracts, loaders, the (brain, stim, outcome) schema
 │   ├── generator/          # the flow-matching data generator
 │   ├── foundation/         # the neurostimulation foundation model (the predictor)
