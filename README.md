@@ -3,11 +3,7 @@
 **M**odelling **A**nticipated **E**ffects of **S**timulating **T**argeted **R**egions **O**ptimally
 
 A foundation model that learns how a brain responds to stimulation, so we can predict
-neurostimulation outcomes for a specific brain instead of guessing. This repository is where
-the DeepBrain research team develops MAESTRO.
-
-> The read side of neuroscience is being claimed. MAESTRO is our work on the write side:
-> the control layer of the brain.
+neurostimulation outcomes for a specific brain instead of guessing.
 
 
 ## What lives where
