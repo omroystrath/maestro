@@ -1,0 +1,14 @@
+# Small neurostimulation foundation model (predictor) for development.
+seed: 0
+n_regions: 32
+data: data/interim/toy
+out: experiments/foundation_small.pt
+foundation:
+  hidden: 512
+  depth: 6
+  lr: 0.0003
+  steps: 3000
+  batch_size: 256
+  weight_real: 3.0
+  weight_synthetic: 1.0
+  weight_simulated: 1.0

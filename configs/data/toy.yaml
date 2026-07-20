@@ -1,0 +1,9 @@
+# Tiny analytic dataset for smoke-testing the whole pipeline without MATLAB.
+engine: analytic
+seed: 0
+n_samples: 2000
+n_regions: 32
+out: data/interim/toy
+params:
+  n_regions: 32
+  noise: 0.05

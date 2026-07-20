@@ -1,0 +1,29 @@
+MAESTRO — third-party components and attributions
+=================================================
+
+This repository vendors third-party software. Each vendored component keeps its own licence.
+MAESTRO's own licence (see LICENSE) does not apply to them.
+
+--------------------------------------------------------------------------------
+VERTEX 2.0  —  simulators/vertex/
+--------------------------------------------------------------------------------
+The Virtual Electrode Recording Tool for EXtracellular Potentials (VERTEX), version 2.0.
+
+Authors:      Christopher Thornton, Frances Hutchings, Marcus Kaiser
+Institution:  University of Newcastle upon Tyne
+Reference:    Thornton C, Hutchings F, Kaiser M. "The Virtual Electrode Recording Tool for
+              EXtracellular Potentials (VERTEX) Version 2.0: Modelling in vitro electrical
+              stimulation of brain tissue." Wellcome Open Research 2019, 4:20.
+Funding note: VERTEX 2.0 stimulation work was supported by the CANDO project
+              (http://www.cando.ac.uk/), Wellcome Trust (102037) and EPSRC (NS/A000026/1).
+Licence:      Non-commercial licence from the University of Newcastle upon Tyne.
+              See simulators/vertex/license.txt for the full terms.
+
+IMPORTANT: The VERTEX licence is for NON-COMMERCIAL use and restricts reproduction,
+modification, and transmission. Before using VERTEX or any data or results derived from it in a
+commercial or product context, review simulators/vertex/license.txt and consult legal. Keep any
+DeepBrain modifications to VERTEX inside simulators/vertex/ and record them in
+simulators/vertex/CHANGES-DEEPBRAIN.md so the boundary with our own code stays clean.
+
+The upstream simulation results referenced in the paper are archived at
+doi:10.5281/zenodo.2423857.

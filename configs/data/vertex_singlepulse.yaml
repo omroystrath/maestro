@@ -1,0 +1,13 @@
+# Real simulated data via the vendored VERTEX engine (requires MATLAB).
+# Falls back to analytic automatically if MATLAB is not present.
+engine: vertex
+seed: 0
+n_samples: 500
+n_regions: 29        # VERTEX rat neocortex model neuron groups (see paper Table 1)
+out: data/interim/vertex_singlepulse
+params:
+  protocol: single_pulse
+  amplitude_mV: 750
+  pulse_width_ms: 0.5
+  stim_onset_ms: 1500
+  density_scale: 0.1   # reduce neuron density for tractable runs (paper suggests /10 on desktop)

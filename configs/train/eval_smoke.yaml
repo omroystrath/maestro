@@ -1,0 +1,6 @@
+# Score the small predictor against the atlas baseline on the toy set.
+seed: 0
+n_regions: 32
+data: data/interim/toy
+checkpoint: experiments/foundation_small.pt
+eval_n: 512

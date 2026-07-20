@@ -1,0 +1,40 @@
+name: CI
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+
+      - name: Install (no torch, fast)
+        run: pip install -e ".[dev,sci]"
+
+      - name: Lint
+        run: |
+          ruff check src tests
+          black --check src tests
+
+      - name: Type check
+        run: mypy
+
+      - name: Test
+        run: pytest --cov=maestro --cov-report=term-missing
+
+      - name: Smoke the pipeline (analytic engine, no torch training)
+        run: |
+          maestro info
+          maestro simulate --config configs/data/toy.yaml --out data/interim/toy_ci

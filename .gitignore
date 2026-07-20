@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+.env
+
+# Tooling caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Data: never commit anything sensitive or heavy. Keep folders via .gitkeep.
+data/raw/*
+data/interim/*
+data/processed/*
+data/synthetic/*
+!data/**/.gitkeep
+
+# Experiment outputs (checkpoints, logs, run artefacts)
+experiments/*
+!experiments/.gitkeep
+*.pt
+*.ckpt
+*.log
+
+# VERTEX heavy outputs / MATLAB cruft (keep the source, drop results and temp)
+simulators/vertex/**/*.mat
+simulators/vertex/**/*.asv
+simulators/vertex/**/*.m~
+simulators/vertex/**/o[0-9]*
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+*.swp

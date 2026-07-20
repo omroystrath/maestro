@@ -1,0 +1,11 @@
+Copyright (c) 2026 DeepBrain Research
+
+MAESTRO's own source code (everything under `src/`, `configs/`, `scripts/`, `tests/`, and
+`docs/`) is licensed for internal DeepBrain use. Choose and insert your organisation's preferred
+licence text here before any external distribution (Apache-2.0 and a proprietary internal licence
+are the two common choices for a research division; discuss with legal).
+
+This LICENSE applies ONLY to MAESTRO's own code. Vendored third-party components keep their
+original licences and are listed in the NOTICE file. In particular, the VERTEX simulator under
+`simulators/vertex/` is distributed under a separate non-commercial licence from the University of
+Newcastle upon Tyne and is NOT covered by this file.
