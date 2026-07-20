@@ -9,35 +9,6 @@ the DeepBrain research team develops MAESTRO.
 > The read side of neuroscience is being claimed. MAESTRO is our work on the write side:
 > the control layer of the brain.
 
----
-
-## The idea in one paragraph
-
-MAESTRO has **two components that improve each other**:
-
-1. A **flow-matching generator** that learns the distribution of brain responses to
-   stimulation and produces training data on demand. It is seeded on biologically plausible
-   simulated data and sharpened by real data over time.
-2. A **neurostimulation foundation model** (the predictor). Trained on generated *and* real
-   data, its job is to predict the outcome of stimulating any brain.
-
-As data grows, the generator gets better, which makes the predictor better, which tells us
-which data to gather next. Both climb their own scaling law at the same time. The whole point
-is to solve the "every brain is different" problem and close the loop for scalable neuromodulation.
-
-```
-        physics + simulation (VERTEX/CANDO)
-                    │
-                    ▼
-        ┌───────────────────────┐        feeds data        ┌──────────────────────────┐
-        │  flow-matching         │ ───────────────────────▶ │  neurostimulation        │
-        │  generator             │                          │  foundation model        │
-        │  (improving sampler)   │ ◀─────────────────────── │  (predicts outcomes)     │
-        └───────────────────────┘      sharpens targets     └──────────────────────────┘
-                    ▲                                                     │
-                    │                    real, consented data            │
-                    └─────────────────────────────────────────── close the loop
-```
 
 ## What lives where
 
@@ -62,11 +33,6 @@ maestro/
 └── data/                   # raw / interim / processed / synthetic (gitignored)
 ```
 
-The data contract that ties everything together is a single record:
-**(brain, stimulation) → outcome**. It is defined once in
-[`src/maestro/data/schema.py`](src/maestro/data/schema.py) and every component reads and writes
-that shape. Get that contract right and the generator, the predictor, and the simulators can all
-be developed independently.
 
 ## Quickstart
 
@@ -90,14 +56,6 @@ See [`docs/getting-started.md`](docs/getting-started.md) for the full walkthroug
 
 ## The roadmap (gated by proof)
 
-| Version | What it is | Gate |
-| ------- | ---------- | ---- |
-| **v0**  | Generator trained on simulated data; predictor beats atlas-only baselines | now, small compute |
-| **v1**  | Population models; first real sessions flow in | compute grows |
-| **v2**  | Per-patient targeting; consented outcomes refine protocols | data advantage |
-| **v3**  | Closed-loop controller: predict, stimulate, sense, update | the general model |
-
-We scale after the evidence, never before it. Each version ships something and earns the next.
 
 ## Working here
 
